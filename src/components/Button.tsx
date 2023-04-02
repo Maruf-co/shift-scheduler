@@ -7,8 +7,8 @@ export interface IButton {
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-const Button = ({ children, className, onClick }: IButton) => {
-  const classes = cn("flex items-center px-3 py-1.5 border", className);
+const Button: React.FC<IButton> = ({ children, className, onClick }) => {
+  const classes = cn("flex items-center px-3 py-1.5", className);
 
   return (
     <button className={classes} onClick={onClick}>

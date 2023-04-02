@@ -6,11 +6,10 @@ export interface IHeadMeta {
   description?: string; 
 }
 
-const HeadMeta: React.FC = ({
+const HeadMeta: React.FC<IHeadMeta> = ({
     title = 'Shift scheduler',
     description = 'Shift scheduler app to manage schedules of employers',
-
-}: IHeadMeta) => {
+}) => {
   return (
     <Head>
       <title>{title}</title>

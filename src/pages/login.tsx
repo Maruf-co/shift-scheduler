@@ -1,5 +1,4 @@
 import HeadMeta from '@/components/HeadMeta'
-import Link from 'next/link'
 
 export default function Login() {
   return (
@@ -7,7 +6,7 @@ export default function Login() {
       <HeadMeta />
       <main>
         <div className='m-10'>
-            <Link href='/test'> Go to test page</Link>
+            login
         </div>
       </main>
     </>
