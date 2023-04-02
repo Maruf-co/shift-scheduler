@@ -1,13 +1,11 @@
-import Link from 'next/link'
 import HeadMeta from '@/components/HeadMeta'
-import Navbar from '@/components/Navbar'
+import Link from 'next/link'
 
-export default function Home() {
+export default function Login() {
   return (
     <>
       <HeadMeta />
       <main>
-        <Navbar />
         <div className='m-10'>
             <Link href='/test'> Go to test page</Link>
         </div>
