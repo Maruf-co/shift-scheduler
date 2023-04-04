@@ -29,6 +29,7 @@ const Navbar: React.FC<INavbar> = ({ page }) => {
   const navItems = [
     {
       href: "/sign-up",
+      text: 'Shift Sign Up',
       icon: (
         <BsFillDoorOpenFill
           color={page === "sign-up" ? "white" : "black"}
@@ -39,6 +40,7 @@ const Navbar: React.FC<INavbar> = ({ page }) => {
     },
     {
       href: "/cover-requests",
+      text: 'Cover Requests',
       icon: (
         <BsArrowLeftRight
           color={page === "cover-requests" ? "white" : "black"}
@@ -49,6 +51,7 @@ const Navbar: React.FC<INavbar> = ({ page }) => {
     },
     {
       href: "/my-shifts",
+      text: 'My Shifts',
       icon: (
         <BsFillCalendarWeekFill
           color={page === "my-shifts" ? "white" : "black"}
@@ -58,8 +61,6 @@ const Navbar: React.FC<INavbar> = ({ page }) => {
       isChosen: page === "my-shifts",
     },
   ];
-
-  console.log(navItems);
 
   return (
     <nav className={style.nav}>
