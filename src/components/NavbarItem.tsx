@@ -12,7 +12,6 @@ export interface INavbarItem {
 }
 
 const NavbarItem: React.FC<INavbarItem> = ({ navItem }) => {
-  // npm color - #cc3534
   const style = {
     item: cn(
       'w-[250px] flex items-center justify-center px-10',

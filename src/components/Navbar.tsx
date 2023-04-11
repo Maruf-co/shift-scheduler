@@ -1,64 +1,50 @@
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
+import React from 'react';
+import cn from 'classnames';
+import Link from 'next/link';
+import NPM from '../../public/NPM';
 
-import Button from "./Button";
-import NavbarItem from "./NavbarItem";
-import { MdMenu } from "react-icons/md";
-import {
-  BsFillDoorOpenFill,
-  BsFillCalendarWeekFill,
-  BsArrowLeftRight,
-} from "react-icons/bs";
+import Button from './Button';
+import NavbarItem from './NavbarItem';
+import { MdMenu } from 'react-icons/md';
+import { BsFillDoorOpenFill, BsFillCalendarWeekFill, BsArrowLeftRight } from 'react-icons/bs';
 
 export interface INavbar {
-  page?: "sign-up" | "cover-requests" | "my-shifts";
+  page?: 'sign-up' | 'cover-requests' | 'my-shifts' | '';
 }
 
-const Navbar: React.FC<INavbar> = ({ page }) => {
-  // npm color - #cc3534
+const Navbar: React.FC<INavbar> = ({ page = '' }) => {
   const style = {
-    nav: "w-screen h-[80px] flex items-center w-fill px-10 bg-white shadow-md",
-    button: "mr-10 hover:bg-gray-100 hover:rounded-full",
-    logo: "w-[200px] pl-5 pr-10 hover:bg-gray-100",
-    links: "h-[80px] flex",
-    link: "w-[250px] flex items-center justify-center px-10",
-    text: "pl-2",
+    nav: 'w-screen h-[80px] flex items-center w-fill px-10 bg-white shadow-md',
+    button: 'mr-10 hover:bg-gray-100 hover:rounded-full',
+    logoWrap: cn(
+      'h-[80px] min-w-[120px] flex justify-center',
+      page === '' ? 'bg-[#cc3534]' : 'bg-white hover:bg-gray-100'
+    ),
+    logo: 'px-10',
+    logoColor: page === '' ? 'white' : 'black',
+    links: 'h-[80px] flex',
+    link: 'w-[250px] flex items-center justify-center px-10',
+    text: 'pl-2',
   };
 
   const navItems = [
     {
-      href: "/sign-up",
+      href: '/sign-up',
       text: 'Shift Sign Up',
-      icon: (
-        <BsFillDoorOpenFill
-          color={page === "sign-up" ? "white" : "black"}
-          size={25}
-        />
-      ),
-      isChosen: page === "sign-up",
+      icon: <BsFillDoorOpenFill color={page === 'sign-up' ? 'white' : 'black'} size={25} />,
+      isChosen: page === 'sign-up',
     },
     {
-      href: "/cover-requests",
+      href: '/cover-requests',
       text: 'Cover Requests',
-      icon: (
-        <BsArrowLeftRight
-          color={page === "cover-requests" ? "white" : "black"}
-          size={25}
-        />
-      ),
-      isChosen: page === "cover-requests",
+      icon: <BsArrowLeftRight color={page === 'cover-requests' ? 'white' : 'black'} size={25} />,
+      isChosen: page === 'cover-requests',
     },
     {
-      href: "/my-shifts",
+      href: '/my-shifts',
       text: 'My Shifts',
-      icon: (
-        <BsFillCalendarWeekFill
-          color={page === "my-shifts" ? "white" : "black"}
-          size={25}
-        />
-      ),
-      isChosen: page === "my-shifts",
+      icon: <BsFillCalendarWeekFill color={page === 'my-shifts' ? 'white' : 'black'} size={25} />,
+      isChosen: page === 'my-shifts',
     },
   ];
 
@@ -68,9 +54,11 @@ const Navbar: React.FC<INavbar> = ({ page }) => {
         <MdMenu size={40} />
       </Button>
 
-      <Link href="/" className={style.logo}>
-        <Image src="/npm.svg" alt="NPM enjoyers logo" width={80} height={37} />
-      </Link>
+      <div className={style.logoWrap}>
+        <Link href="/" className={style.logo}>
+          <NPM color={style.logoColor} />
+        </Link>
+      </div>
 
       <div className={style.links}>
         {navItems.map((navItem) => {

@@ -1,11 +1,11 @@
-import HeadMeta from "@/components/HeadMeta";
-import Navbar from "@/components/Navbar";
-import ShiftCard from "@/components/ShiftCard";
+import HeadMeta from '@/components/HeadMeta';
+import Navbar from '@/components/Navbar';
+import ShiftCard from '@/components/ShiftCard';
 
 export default function SignUp() {
   return (
     <>
-      <HeadMeta />
+      <HeadMeta title="Shift Sign Up" description="Page where user can pick shiftCards of the companies" />
       <main>
         <Navbar page="sign-up" />
         {/* <div className="text-2xl flex items-center justify-center h-screen">
