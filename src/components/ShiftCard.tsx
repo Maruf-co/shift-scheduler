@@ -1,30 +1,32 @@
 import React from 'react';
 import cn from 'classnames';
 
-import { BiCalendarPlus } from 'react-icons/bi';
-
 import Image from 'next/image';
 import Link from 'next/link';
 
-import Button from './Button';
+import ButtonWithModal from './ButtonWithModal';
 
 export interface IShiftCard {
   className?: string;
-  onClick?: React.MouseEventHandler<HTMLButtonElement>;
+  actionTitle?: string;
 
-  shiftName?: string;
-  availableShifts?: string;
+  // !!! should be non-optional
+  shiftTitle?: string;
+  shiftSubTitle?: string;
   imgSrc?: string;
   cardLink?: string;
+  actionIcon?: React.ReactNode;
 }
 
 const ShiftCard: React.FC<IShiftCard> = ({
   className,
 
-  shiftName = 'ср, апр. 05, 2023 7:00 PM (4 hours)',
-  availableShifts = '1',
-  imgSrc = 'https://lh3.googleusercontent.com/V0YvtlUy_LcYx-yEaTiTo62MsE2IKkWg8hTIuPw2oCiHuBIjFu-t6wlakxxakQ=w600',
-  cardLink = 'https://ya.ru',
+  shiftTitle,
+  shiftSubTitle,
+  imgSrc,
+  cardLink,
+  actionIcon,
+  actionTitle,
 }) => {
   const style = {
     cardWrap: 'relative',
@@ -34,9 +36,8 @@ const ShiftCard: React.FC<IShiftCard> = ({
     img: 'm-2',
     contentWrap: 'flex justify-between h-[90px] p-2',
     content: 'flex flex-col',
-    date: '',
-    shifts: 'text-gray-500',
-    signUpButton: 'z-[1] mt-auto',
+    subTitle: 'text-sm text-gray-500 pt-1',
+    actionButton: 'z-[1] mt-auto',
   };
 
   return (
@@ -48,12 +49,35 @@ const ShiftCard: React.FC<IShiftCard> = ({
         </div>
         <div className={style.contentWrap}>
           <div className={style.content}>
-            <span className={style.date}>{shiftName}</span>
-            <span className={style.shifts}>Available Shifts: {availableShifts}</span>
+            <span>{shiftTitle}</span>
+            <span className={style.subTitle}>{shiftSubTitle}</span>
           </div>
-          <Button className={style.signUpButton} onClick={() => console.log('click')} title={'Sign-Up'}>
-            <BiCalendarPlus size={20} />
+
+          {/* <Button className={style.actionButton} onClick={openModal}>
+            {actionIcon}
           </Button>
+
+          <Modal
+            isOpen={modalIsOpen}
+            onAfterOpen={afterOpenModal}
+            onRequestClose={closeModal}
+            style={customStyles}
+            contentLabel="Example Modal"
+          >
+            <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello</h2>
+            <button onClick={closeModal}>close</button>
+            <div>I am a modal</div>
+            <form>
+              <input />
+              <button>tab navigation</button>
+              <button>stays</button>
+              <button>inside</button>
+              <button>the modal</button>
+            </form>
+          </Modal> */}
+          <ButtonWithModal className={style.actionButton} title={actionTitle}>
+            {actionIcon}
+          </ButtonWithModal>
         </div>
       </div>
     </div>

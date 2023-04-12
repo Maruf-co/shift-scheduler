@@ -1,5 +1,6 @@
 import HeadMeta from '@/components/HeadMeta';
 import Navbar from '@/components/Navbar';
+import ShiftCardCover from '@/components/ShiftCardCover';
 
 export default function CoverRequest() {
   return (
@@ -10,9 +11,9 @@ export default function CoverRequest() {
       />
       <main>
         <Navbar page="cover-requests" />
-        <div className="text-2xl flex items-center justify-center h-screen">
-          <h1>Cover Request page</h1>
-        </div>
+        <ShiftCardCover />
+        <ShiftCardCover />
+        <ShiftCardCover />
       </main>
     </>
   );
