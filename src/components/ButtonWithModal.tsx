@@ -19,6 +19,12 @@ const ButtonWithModal: React.FC<IButtonWithModal> = ({
   modalText = 'Are you sure?',
   modalOptionText = 'YES',
 }) => {
+  const style = {
+    title: 'text-xl',
+    buttons: 'flex',
+    button: 'font-medium text-npm-blue py-2.5 pt-4 ml-4',
+  };
+
   const customStyles = {
     content: {
       top: '50%',
@@ -57,13 +63,13 @@ const ButtonWithModal: React.FC<IButtonWithModal> = ({
         style={customStyles}
         contentLabel="Confirmation Modal"
       >
-        <h2>Confirm</h2>
+        <h2 className={style.title}>Confirm</h2>
         <div>{modalText}</div>
-        <div className="flex">
-          <Button className={className} onClick={() => setIsOpen(false)}>
+        <div className={style.buttons}>
+          <Button className={style.button} onClick={() => setIsOpen(false)}>
             NO
           </Button>
-          <Button className={className} onClick={() => console.log('Take shift (backend)')}>
+          <Button className={style.button} onClick={() => console.log('Take shift (backend)')}>
             {modalOptionText}
           </Button>
         </div>

@@ -15,7 +15,7 @@ const NavbarItem: React.FC<INavbarItem> = ({ navItem }) => {
   const style = {
     item: cn(
       'w-[250px] flex items-center justify-center px-10',
-      navItem.isChosen ? 'bg-[#cc3534]' : 'bg-white hover:bg-gray-100'
+      navItem.isChosen ? 'bg-npm-red' : 'bg-white hover:bg-gray-100'
     ),
     text: cn('pl-2', navItem.isChosen ? 'text-white' : 'text-black'),
   };

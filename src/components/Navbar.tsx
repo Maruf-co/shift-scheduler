@@ -18,7 +18,7 @@ const Navbar: React.FC<INavbar> = ({ page = '' }) => {
     button: 'mr-10 hover:bg-gray-100 hover:rounded-full',
     logoWrap: cn(
       'h-[80px] min-w-[120px] flex justify-center',
-      page === '' ? 'bg-[#cc3534]' : 'bg-white hover:bg-gray-100'
+      page === '' ? 'bg-npm-red' : 'bg-white hover:bg-gray-100'
     ),
     logo: 'px-10',
     logoColor: page === '' ? 'white' : 'black',
