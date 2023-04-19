@@ -11,7 +11,6 @@ const ShiftCardSignUp: React.FC<IShiftCard> = ({
   imgSrc = 'https://lh3.googleusercontent.com/V0YvtlUy_LcYx-yEaTiTo62MsE2IKkWg8hTIuPw2oCiHuBIjFu-t6wlakxxakQ=w600',
   cardLink = 'https://ya.ru',
 }) => {
-
   return (
     <ShiftCard
       className={className}
@@ -19,7 +18,11 @@ const ShiftCardSignUp: React.FC<IShiftCard> = ({
       shiftSubTitle={`Available shifts: ${shiftSubTitle}`}
       imgSrc={imgSrc}
       cardLink={cardLink}
-      actionIcon={<BiCalendarPlus className='text-gray-500' size={20} />}
+      actionIcon={<BiCalendarPlus className="text-gray-500" size={20} />}
+      modal={{
+        text: 'Are you sure you want to sign up for this shift?',
+        optionText: 'sign-up',
+      }}
     />
   );
 };

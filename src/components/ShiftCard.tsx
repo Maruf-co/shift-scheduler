@@ -4,7 +4,7 @@ import cn from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import ButtonWithModal from './ButtonWithModal';
+import ButtonWithModal, { IButtonWithModal } from './ButtonWithModal';
 
 export interface IShiftCard {
   className?: string;
@@ -16,6 +16,7 @@ export interface IShiftCard {
   imgSrc?: string;
   cardLink?: string;
   actionIcon?: React.ReactNode;
+  modal?: IButtonWithModal['modal'];
 }
 
 const ShiftCard: React.FC<IShiftCard> = ({
@@ -27,6 +28,7 @@ const ShiftCard: React.FC<IShiftCard> = ({
   cardLink,
   actionIcon,
   actionTitle,
+  modal,
 }) => {
   const style = {
     cardWrap: 'relative',
@@ -53,29 +55,7 @@ const ShiftCard: React.FC<IShiftCard> = ({
             <span className={style.subTitle}>{shiftSubTitle}</span>
           </div>
 
-          {/* <Button className={style.actionButton} onClick={openModal}>
-            {actionIcon}
-          </Button>
-
-          <Modal
-            isOpen={modalIsOpen}
-            onAfterOpen={afterOpenModal}
-            onRequestClose={closeModal}
-            style={customStyles}
-            contentLabel="Example Modal"
-          >
-            <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello</h2>
-            <button onClick={closeModal}>close</button>
-            <div>I am a modal</div>
-            <form>
-              <input />
-              <button>tab navigation</button>
-              <button>stays</button>
-              <button>inside</button>
-              <button>the modal</button>
-            </form>
-          </Modal> */}
-          <ButtonWithModal className={style.actionButton} title={actionTitle}>
+          <ButtonWithModal className={style.actionButton} title={actionTitle} modal={modal}>
             {actionIcon}
           </ButtonWithModal>
         </div>

@@ -14,17 +14,17 @@ export interface INavbar {
 
 const Navbar: React.FC<INavbar> = ({ page = '' }) => {
   const style = {
-    nav: 'w-screen h-[80px] flex items-center w-fill px-10 bg-white shadow-md',
+    nav: 'bg-white shadow-md grid grid-cols-[1fr_1fr_8fr] w-screen h-[80px] px-10',
     button: 'mr-10 hover:bg-gray-100 hover:rounded-full',
+
     logoWrap: cn(
       'h-[80px] min-w-[120px] flex justify-center',
       page === '' ? 'bg-npm-red' : 'bg-white hover:bg-gray-100'
     ),
     logo: 'px-10',
     logoColor: page === '' ? 'white' : 'black',
-    links: 'h-[80px] flex',
-    link: 'w-[250px] flex items-center justify-center px-10',
-    text: 'pl-2',
+
+    links: 'h-[80px] flex justify-center',
   };
 
   const navItems = [
