@@ -3,8 +3,6 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import ButtonWithModal, { IButtonWithModal } from './ButtonWithModal';
-
 export interface IShiftCard {
   shiftTitle: string;
   shiftSubTitle: string;

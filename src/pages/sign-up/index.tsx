@@ -1,6 +1,6 @@
 import HeadMeta from '@/components/HeadMeta';
 import Navbar from '@/components/Navbar';
-import SignUpBody from '@/components/SignUpBody';
+import SignUpBody from '@/components/PageBody/SignUpBody';
 
 export default function SignUp() {
   return (

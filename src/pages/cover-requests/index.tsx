@@ -1,6 +1,6 @@
 import HeadMeta from '@/components/HeadMeta';
 import Navbar from '@/components/Navbar';
-import CoverRequestsBody from '@/components/CoverRequestsBody';
+import CoverRequestsBody from '@/components/PageBody/CoverRequestsBody';
 
 export default function CoverRequest() {
   return (

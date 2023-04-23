@@ -3,6 +3,7 @@ export const shiftSignUpMock = [
   {
     locationName: 'Location North',
     logo: 'https://lh3.googleusercontent.com/V0YvtlUy_LcYx-yEaTiTo62MsE2IKkWg8hTIuPw2oCiHuBIjFu-t6wlakxxakQ=w600',
+    id: 'h982uhd9uhiod2i3',
     cards: [
       {
         id: 'qwdweqqdsqq1',
@@ -25,6 +26,7 @@ export const shiftSignUpMock = [
   {
     locationName: 'Location South',
     logo: 'https://lh3.googleusercontent.com/EA6ZGhkVVjHWhZfaweGgiWsRCY5h3TSDjgVmnyIaD9anqoR6ynZdy-T8z-YtWJ4=w600',
+    id: 'h982uhd9uhiod2i4',
     cards: [
       {
         id: 'wekrhfcoqwh3r3',

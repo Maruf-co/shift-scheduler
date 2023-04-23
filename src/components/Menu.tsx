@@ -6,31 +6,30 @@ import { BsMegaphoneFill } from 'react-icons/bs';
 import { AiOutlineMenuUnfold } from 'react-icons/ai';
 import { FaPlay } from 'react-icons/fa';
 
+import Link from 'next/link';
+
 import Button from './Button';
 
 export interface IMenu {
   onClose: React.MouseEventHandler<HTMLButtonElement>;
   withClockIn?: boolean;
-  menuId?: string;
+  id: string;
 }
 
-const Menu: React.FC<IMenu> = ({ withClockIn, onClose, menuId }) => {
+const Menu: React.FC<IMenu> = ({ withClockIn, onClose, id }) => {
   const [menuTop, setMenuTop] = useState('90px');
+  const menuId = `menu_${id}`;
 
   useEffect(() => {
+    const element = document.getElementById(menuId);
+
+    const yCoord = Math.round(element?.getBoundingClientRect().top || 90);
+    setMenuTop(`${yCoord}px`);
+
     document.body.classList.add('overflow-hidden');
 
     return () => document.body.classList.remove('overflow-hidden');
   }, []);
-
-  if (menuId) {
-    useEffect(() => {
-      const element = document.getElementById(menuId);
-      // @ts-ignore
-      const yCoord = Math.round(element?.getBoundingClientRect().top);
-      setMenuTop(`${yCoord}px`);
-    }, []);
-  }
 
   const style = {
     icon: 'text-gray-500',
@@ -50,14 +49,18 @@ const Menu: React.FC<IMenu> = ({ withClockIn, onClose, menuId }) => {
     );
   };
 
+  const detailsOption = (
+    <Link href={`my-shifts/card/${id}`} className={style.menuRow}>
+      <AiOutlineMenuUnfold size={18} className={style.icon} />
+      <span className={style.menuText}>Go to details</span>
+    </Link>
+  );
+
   return ReactDOM.createPortal(
     <div>
-      {/* @ts-ignore */}
-      <div onClick={onClose} className={style.background} />
+      <button onClick={onClose} className={style.background} />
       <ol className={style.menu} style={{ top: menuTop }}>
-        <li>
-          {menuRow(<AiOutlineMenuUnfold size={18} className={style.icon} />, 'Go to details')}
-        </li>
+        <li>{detailsOption}</li>
         <li>{withClockIn && menuRow(<FaPlay size={15} className={style.icon} />, 'Clock In')}</li>
         <li>{menuRow(<BsMegaphoneFill size={15} className={style.icon} />, 'Request Cover')}</li>
       </ol>

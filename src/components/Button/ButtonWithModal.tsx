@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import Button from './Button';
-import Modal from './Modal';
+import Button from '.';
+import Modal from '../Modal';
 
 export interface IButtonWithModal {
   className?: string;

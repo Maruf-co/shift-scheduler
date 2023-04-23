@@ -1,9 +1,10 @@
 import React from 'react';
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { shiftSignUpMock } from '@/pages/api/requestsMock';
-import ShiftCardSignUp from './ShiftCardSignUp';
+import ShiftCardSignUp from '../ShiftCardSignUp';
 
 const SignUpBody: React.FC<{ className?: string }> = ({ className }) => {
   const style = {
@@ -23,7 +24,7 @@ const SignUpBody: React.FC<{ className?: string }> = ({ className }) => {
           shiftTitle={card.shiftName}
           shiftSubTitle={card.available}
           imgSrc={organization.logo}
-          cardLink={`card/${card.id}`}
+          cardLink={`sign-up/card/${card.id}`}
         />
       );
     });
@@ -31,15 +32,12 @@ const SignUpBody: React.FC<{ className?: string }> = ({ className }) => {
     return (
       <div className={style.wrap} key={idx}>
         <div className={style.organizationWrap}>
-          <div
-            className={style.organizationBox}
-            onClick={() => console.log('open organization page')}
-          >
+          <Link className={style.organizationBox} href={`organization/${organization.id}`}>
             <div className={style.logo}>
               <Image src={organization.logo} alt="Organization logo" width={27} height={26} />
             </div>
             <span className={style.title}>{organization.locationName}</span>
-          </div>
+          </Link>
           <div className={style.counterBox}>{renderedCards.length}</div>
         </div>
         {renderedCards}

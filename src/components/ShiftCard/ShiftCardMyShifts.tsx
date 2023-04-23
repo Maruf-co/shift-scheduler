@@ -1,14 +1,14 @@
 import React from 'react';
 
-import ButtonWithMenu from './ButtonWithMenu';
+import ButtonWithMenu from '../Button/ButtonWithMenu';
 
-import ShiftCard from './ShiftCard';
+import ShiftCard from '.';
 
 interface IShiftCardMyShifts {
   shiftTitle: string;
   shiftSubTitle: string;
   imgSrc: string;
-  cardLink?: string;
+  cardLink: string;
   withClockIn?: boolean;
   id: string;
 }
@@ -17,7 +17,7 @@ const ShiftCardMyShifts: React.FC<IShiftCardMyShifts> = ({
   shiftTitle,
   shiftSubTitle,
   imgSrc,
-  cardLink = 'https://ya.ru',
+  cardLink,
   withClockIn,
   id,
 }) => {

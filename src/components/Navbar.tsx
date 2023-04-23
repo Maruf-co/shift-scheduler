@@ -1,22 +1,27 @@
 import React from 'react';
 import cn from 'classnames';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+
 import NPM from '../../public/NPM';
 
-import Button from './Button';
-import NavbarItem from './NavbarItem';
-import { MdMenu } from 'react-icons/md';
 import { BsFillDoorOpenFill, BsFillCalendarWeekFill, BsArrowLeftRight } from 'react-icons/bs';
+import { MdKeyboardBackspace } from 'react-icons/md';
+
+import Button from './Button';
+import ButtonWithSideBar from './Button/ButtonWithSideBar';
+import NavbarItem from './NavbarItem';
 
 export interface INavbar {
   page?: 'sign-up' | 'cover-requests' | 'my-shifts' | '';
+  isback?: boolean;
 }
 
-const Navbar: React.FC<INavbar> = ({ page = '' }) => {
+const Navbar: React.FC<INavbar> = ({ page = '', isback }) => {
   const style = {
     nav: 'bg-white shadow-md grid grid-cols-[1fr_1fr_8fr] w-screen h-[80px] px-10',
-    button: 'justify-center mr-10 px-3 py-1.5 hover:bg-gray-100 hover:rounded-full',
-
+    buttonWrap: 'flex mr-10 justify-center items-center',
+    button: 'hover:bg-gray-100 hover:rounded-full p-2',
     logoWrap: cn(
       'h-[80px] min-w-[120px] flex justify-center',
       page === '' ? 'bg-npm-red' : 'bg-white hover:bg-gray-100'
@@ -48,11 +53,20 @@ const Navbar: React.FC<INavbar> = ({ page = '' }) => {
     },
   ];
 
+  const router = useRouter();
+  const goBack = () => router.back();
+
+  const cornerButton = isback ? (
+    <Button className={style.button} onClick={goBack}>
+      <MdKeyboardBackspace size={30} />
+    </Button>
+  ) : (
+    <ButtonWithSideBar className={style.button} />
+  );
+
   return (
     <nav className={style.nav}>
-      <Button className={style.button}>
-        <MdMenu size={40} />
-      </Button>
+      <div className={style.buttonWrap}>{cornerButton}</div>
 
       <div className={style.logoWrap}>
         <Link href="/" className={style.logo}>

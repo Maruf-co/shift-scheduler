@@ -16,7 +16,7 @@ const Table: React.FC<ITable> = ({ className, data, config, keyFn }) => {
     table: 'table-auto',
     tRow: '',
     tHeader: 'text-left border-2 pl-2 pr-4 mr-1',
-    tData: 'border-2 py-2 pl-1 pr-2',
+    tData: 'text-center border-2 py-2 pl-1 pr-2',
   };
 
   const renderedHeaders = config.map((column) => {

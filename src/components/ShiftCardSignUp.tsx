@@ -2,7 +2,7 @@ import React from 'react';
 
 import { BiCalendarPlus } from 'react-icons/bi';
 
-import ButtonWithModal from './ButtonWithModal';
+import ButtonWithModal from './Button/ButtonWithModal';
 import ShiftCard from './ShiftCard';
 
 interface IShiftCardSignUp {

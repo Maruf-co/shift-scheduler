@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { myShiftsMock } from '@/pages/api/requestsMock';
-import ShiftCardMyShifts from './ShiftCardMyShifts';
+import ShiftCardMyShifts from '../ShiftCard/ShiftCardMyShifts';
 
 export type Shift = {
   id: string;
@@ -52,6 +52,7 @@ const MyShiftsBody: React.FC = () => {
           shiftSubTitle={shift.locationName}
           imgSrc={shift.logo}
           withClockIn={withClockIn}
+          cardLink={`my-shifts/card/${shift.id}?date=${shift.date}`}
         />
       );
     });

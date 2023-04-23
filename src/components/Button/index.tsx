@@ -1,6 +1,6 @@
 import React from 'react';
 import cn from 'classnames';
-import Tooltip from './Tooltip';
+import Tooltip from '../Tooltip';
 
 export interface IButton {
   className?: string;

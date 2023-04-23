@@ -1,6 +1,6 @@
 import HeadMeta from '@/components/HeadMeta';
 import Navbar from '@/components/Navbar';
-import MyShiftsBody from '@/components/MyShiftsBody';
+import MyShiftsBody from '@/components/PageBody/MyShiftsBody';
 
 export default function MyShifts() {
   return (

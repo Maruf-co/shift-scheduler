@@ -3,14 +3,14 @@ import cn from 'classnames';
 
 import { GoKebabVertical } from 'react-icons/go';
 
-import Menu from './Menu';
+import Menu from '../Menu';
 
-import Button from './Button';
+import Button from '.';
 
 export interface IButtonWithMenu {
   className?: string;
   withClockIn?: boolean;
-  cardId?: string;
+  cardId: string;
 }
 
 const ButtonWithMenu: React.FC<IButtonWithMenu> = ({ className, withClockIn, cardId }) => {
@@ -18,8 +18,6 @@ const ButtonWithMenu: React.FC<IButtonWithMenu> = ({ className, withClockIn, car
 
   const handleOpen = () => setIsOpen(true);
   const handleClose = () => setIsOpen(false);
-
-  const menuId = `menu_${cardId}`;
 
   const style = {
     wrap: 'relative',
@@ -29,10 +27,10 @@ const ButtonWithMenu: React.FC<IButtonWithMenu> = ({ className, withClockIn, car
 
   return (
     <>
-      <Button className={cn(style.button, className)} onClick={handleOpen} id={menuId}>
+      <Button className={cn(style.button, className)} onClick={handleOpen} id={`menu_${cardId}`}>
         <GoKebabVertical className={style.icon} size={20} />
       </Button>
-      {isOpen && <Menu withClockIn={withClockIn} onClose={handleClose} menuId={menuId} />}
+      {isOpen && <Menu withClockIn={withClockIn} onClose={handleClose} id={cardId} />}
     </>
   );
 };

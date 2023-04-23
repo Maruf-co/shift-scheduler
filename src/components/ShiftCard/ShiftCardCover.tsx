@@ -2,21 +2,21 @@ import React from 'react';
 
 import { BsFillArrowRightCircleFill } from 'react-icons/bs';
 
-import ButtonWithModal from './ButtonWithModal';
-import ShiftCard from './ShiftCard';
+import ButtonWithModal from '../Button/ButtonWithModal';
+import ShiftCard from '.';
 
 interface IShiftCardCover {
   shiftTitle: string;
   shiftSubTitle: string;
   imgSrc: string;
-  cardLink?: string;
+  cardLink: string;
 }
 
 const ShiftCardCover: React.FC<IShiftCardCover> = ({
   shiftTitle,
   shiftSubTitle,
   imgSrc,
-  cardLink = 'https://ya.ru',
+  cardLink,
 }) => {
   const modal = {
     text: 'Are you sure you want to accept this shift?',
