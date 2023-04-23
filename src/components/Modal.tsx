@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom';
 import { useEffect } from 'react';
 
 export interface IModal {
-  // onClose: React.MouseEventHandler<HTMLButtonElement>;
-
   children?: React.ReactNode;
   actionBar?: React.ReactNode;
 }
@@ -35,7 +33,7 @@ const Modal: React.FC<IModal> = ({ children, actionBar }) => {
       </div>
     </div>,
     // @ts-ignore
-    document.querySelector('.modal-container')
+    document.querySelector('.outside-container')
   );
 };
 

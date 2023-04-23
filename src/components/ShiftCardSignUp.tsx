@@ -2,27 +2,40 @@ import React from 'react';
 
 import { BiCalendarPlus } from 'react-icons/bi';
 
-import ShiftCard, { IShiftCard } from './ShiftCard';
+import ButtonWithModal from './ButtonWithModal';
+import ShiftCard from './ShiftCard';
 
-const ShiftCardSignUp: React.FC<IShiftCard> = ({
-  className,
-  shiftTitle = 'ср, апр. 05, 2023 7:00 PM (4 hours)',
-  shiftSubTitle = '1',
-  imgSrc = 'https://lh3.googleusercontent.com/V0YvtlUy_LcYx-yEaTiTo62MsE2IKkWg8hTIuPw2oCiHuBIjFu-t6wlakxxakQ=w600',
+interface IShiftCardSignUp {
+  shiftTitle: string;
+  shiftSubTitle: number;
+  imgSrc: string;
+  cardLink?: string;
+}
+
+const ShiftCardSignUp: React.FC<IShiftCardSignUp> = ({
+  shiftTitle,
+  shiftSubTitle,
+  imgSrc,
   cardLink = 'https://ya.ru',
 }) => {
+  const modal = {
+    text: 'Are you sure you want to sign up for this shift?',
+    optionText: 'sign-up',
+  };
+
+  const actionButton = (
+    <ButtonWithModal className="z-[1] mt-auto px-3 py-1.5" tooltip="Sign-Up" modal={modal}>
+      <BiCalendarPlus className="text-gray-500" size={20} />
+    </ButtonWithModal>
+  );
+
   return (
     <ShiftCard
-      className={className}
       shiftTitle={shiftTitle}
       shiftSubTitle={`Available shifts: ${shiftSubTitle}`}
       imgSrc={imgSrc}
       cardLink={cardLink}
-      actionIcon={<BiCalendarPlus className="text-gray-500" size={20} />}
-      modal={{
-        text: 'Are you sure you want to sign up for this shift?',
-        optionText: 'sign-up',
-      }}
+      actionButton={actionButton}
     />
   );
 };

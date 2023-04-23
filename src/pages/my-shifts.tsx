@@ -1,6 +1,6 @@
 import HeadMeta from '@/components/HeadMeta';
 import Navbar from '@/components/Navbar';
-import ShiftCardSignUp from '@/components/ShiftCardSignUp';
+import MyShiftsBody from '@/components/MyShiftsBody';
 
 export default function MyShifts() {
   return (
@@ -11,10 +11,7 @@ export default function MyShifts() {
       />
       <main>
         <Navbar page="my-shifts" />
-        {/* <div className="text-2xl flex items-center justify-center h-screen">
-          <h1>My Shifts page</h1>
-        </div> */}
-        <div className=""></div>
+        <MyShiftsBody />
       </main>
     </>
   );

@@ -1,6 +1,6 @@
 import HeadMeta from '@/components/HeadMeta';
 import Navbar from '@/components/Navbar';
-import ShiftCardCover from '@/components/ShiftCardCover';
+import CoverRequestsBody from '@/components/CoverRequestsBody';
 
 export default function CoverRequest() {
   return (
@@ -11,9 +11,7 @@ export default function CoverRequest() {
       />
       <main>
         <Navbar page="cover-requests" />
-        <ShiftCardCover />
-        <ShiftCardCover />
-        <ShiftCardCover />
+        <CoverRequestsBody />
       </main>
     </>
   );

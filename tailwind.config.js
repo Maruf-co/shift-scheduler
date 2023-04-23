@@ -13,7 +13,7 @@ module.exports = {
       colors: {
         'npm-red': '#cc3534',
         'npm-blue': '#4891db',
-        neutral: '#f3f3f3',
+        neutral: '#f8f9fa',
       },
     },
   },

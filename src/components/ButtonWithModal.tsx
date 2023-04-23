@@ -6,7 +6,7 @@ import Modal from './Modal';
 export interface IButtonWithModal {
   className?: string;
   children?: React.ReactNode;
-  title?: string;
+  tooltip?: string;
 
   modal?: {
     text: string;
@@ -17,7 +17,7 @@ export interface IButtonWithModal {
 const ButtonWithModal: React.FC<IButtonWithModal> = ({
   children,
   className,
-  title,
+  tooltip,
   modal = {
     text: 'Are you sure?',
     optionText: 'yes',
@@ -32,6 +32,7 @@ const ButtonWithModal: React.FC<IButtonWithModal> = ({
     content: 'pt-4 pb-10',
     buttons: 'flex',
     button: 'font-medium text-npm-blue py-2.5 px-4 ml-4',
+    tooltip: 'bg-gray-500 text-white rounded',
   };
 
   const handleOpen = () => {
@@ -62,7 +63,7 @@ const ButtonWithModal: React.FC<IButtonWithModal> = ({
 
   return (
     <>
-      <Button className={className} onClick={handleOpen} title={title}>
+      <Button className={className} onClick={handleOpen} tooltip={tooltip}>
         {children}
       </Button>
       {showModal && modalComponent}

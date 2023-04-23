@@ -15,7 +15,7 @@ export interface INavbar {
 const Navbar: React.FC<INavbar> = ({ page = '' }) => {
   const style = {
     nav: 'bg-white shadow-md grid grid-cols-[1fr_1fr_8fr] w-screen h-[80px] px-10',
-    button: 'mr-10 hover:bg-gray-100 hover:rounded-full',
+    button: 'justify-center mr-10 px-3 py-1.5 hover:bg-gray-100 hover:rounded-full',
 
     logoWrap: cn(
       'h-[80px] min-w-[120px] flex justify-center',
@@ -61,8 +61,8 @@ const Navbar: React.FC<INavbar> = ({ page = '' }) => {
       </div>
 
       <div className={style.links}>
-        {navItems.map((navItem) => {
-          return <NavbarItem navItem={navItem} />;
+        {navItems.map((navItem, idx) => {
+          return <NavbarItem navItem={navItem} key={idx} />;
         })}
       </div>
     </nav>

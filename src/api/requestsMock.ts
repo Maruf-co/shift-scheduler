@@ -24,7 +24,7 @@ export const shiftSignUpMock = [
 
   {
     locationName: 'Location South',
-    logo: 'https://www.appsheet.com/image/getimageurl?appName…258e10f430644b3feb8de94e723672de0ae6a69&width=600',
+    logo: 'https://lh3.googleusercontent.com/EA6ZGhkVVjHWhZfaweGgiWsRCY5h3TSDjgVmnyIaD9anqoR6ynZdy-T8z-YtWJ4=w600',
     cards: [
       {
         id: 'wekrhfcoqwh3r3',
@@ -68,36 +68,36 @@ export const coverRequestsMock = [
     id: 'ghdfiugiuy2diyh5',
     shiftName: 'Wed, Apr 19, 2023 7:00 PM (4 hours)',
     locationName: 'Location South',
-    logo: 'https://www.appsheet.com/image/getimageurl?appName…258e10f430644b3feb8de94e723672de0ae6a69&width=600',
+    logo: 'https://lh3.googleusercontent.com/EA6ZGhkVVjHWhZfaweGgiWsRCY5h3TSDjgVmnyIaD9anqoR6ynZdy-T8z-YtWJ4=w600',
   },
 ];
 // My Shifts
 export const myShiftsMock = [
   {
     id: 'ghdfiugiuy2diyh5',
-    shiftName: 'Wed, Apr 19, 2023 7:00 PM (4 hours)',
-    date: 'Apr 19, 2023',
+    shiftName: 'Wed, Apr 25, 2023 11:00 PM (4 hours)',
+    date: 'Apr 25, 2023',
     locationName: 'Location South',
-    logo: 'https://www.appsheet.com/image/getimageurl?appName…258e10f430644b3feb8de94e723672de0ae6a69&width=600',
+    logo: 'https://lh3.googleusercontent.com/EA6ZGhkVVjHWhZfaweGgiWsRCY5h3TSDjgVmnyIaD9anqoR6ynZdy-T8z-YtWJ4=w600',
   },
   {
     id: 'wekrhfcoqwh3r3',
-    shiftName: 'Thu, Apr 20, 2023 7:00 PM (4 hours)',
-    date: 'Apr 19, 2023',
+    shiftName: 'Thu, Apr 23, 2023 7:00 PM (4 hours)',
+    date: 'Apr 23, 2023',
     locationName: 'Location South',
-    logo: 'https://www.appsheet.com/image/getimageurl?appName…258e10f430644b3feb8de94e723672de0ae6a69&width=600',
+    logo: 'https://lh3.googleusercontent.com/EA6ZGhkVVjHWhZfaweGgiWsRCY5h3TSDjgVmnyIaD9anqoR6ynZdy-T8z-YtWJ4=w600',
   },
   {
     id: 'qwdweqqdsqq1',
-    shiftName: 'Thu, Apr 20, 2023 7:00 PM (4 hours)',
-    date: 'Apr 20, 2023',
+    shiftName: 'Thu, Apr 31, 2023 7:00 PM (4 hours)',
+    date: 'Apr 31, 2023',
     locationName: 'Location North',
     logo: 'https://lh3.googleusercontent.com/V0YvtlUy_LcYx-yEaTiTo62MsE2IKkWg8hTIuPw2oCiHuBIjFu-t6wlakxxakQ=w600',
   },
   {
     id: 'qwdweqqdsqq3',
-    shiftName: 'Thu, Apr 20, 2023 11:00 AM (4 hours)',
-    date: 'Apr 20, 2023',
+    shiftName: 'Thu, Apr 23, 2023 11:00 AM (4 hours)',
+    date: 'Apr 23, 2023',
     locationName: 'Location North',
     logo: 'https://lh3.googleusercontent.com/V0YvtlUy_LcYx-yEaTiTo62MsE2IKkWg8hTIuPw2oCiHuBIjFu-t6wlakxxakQ=w600',
   },
@@ -119,7 +119,7 @@ export const employerMock = {
   email: 'default666@mail.com',
   position: 'Field Manager',
   avatar:
-    '	https://www.appsheet.com/image/getimageurl?appName…3be1725e8327ddd804230a78414fb0c24f2c84f&width=600',
+    'https://www.appsheet.com/image/getimageurl?appName…3be1725e8327ddd804230a78414fb0c24f2c84f&width=600',
   organization: 'Location North',
   logo: 'https://lh3.googleusercontent.com/V0YvtlUy_LcYx-yEaTiTo62MsE2IKkWg8hTIuPw2oCiHuBIjFu-t6wlakxxakQ=w600',
 };
@@ -156,7 +156,7 @@ export const organizationMock = {
 // ShiftCard
 export const shiftCardMock = {
   locationName: 'Location South',
-  logo: 'https://www.appsheet.com/image/getimageurl?appName…258e10f430644b3feb8de94e723672de0ae6a69&width=600',
+  logo: 'https://lh3.googleusercontent.com/EA6ZGhkVVjHWhZfaweGgiWsRCY5h3TSDjgVmnyIaD9anqoR6ynZdy-T8z-YtWJ4=w600',
   scheduledDate: '20.04.2021',
   startTime: '20:00',
   endTime: '21:00',
@@ -182,7 +182,7 @@ export const coverShiftCardMock = {
   shiftId: 'ijuhuihui2312d1oi',
   shiftName: 'Wed, Apr 19, 2023 7:00 PM (4 hours)',
   locationName: 'Location South',
-  logo: 'https://www.appsheet.com/image/getimageurl?appName…258e10f430644b3feb8de94e723672de0ae6a69&width=600',
+  logo: 'https://lh3.googleusercontent.com/EA6ZGhkVVjHWhZfaweGgiWsRCY5h3TSDjgVmnyIaD9anqoR6ynZdy-T8z-YtWJ4=w600',
   currentOwner: {
     id: 'jhoudhuio2h398yhd89i2d',
     name: 'User 6',

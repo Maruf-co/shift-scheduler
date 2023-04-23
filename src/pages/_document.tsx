@@ -7,7 +7,7 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
-        <div className="modal-container" />
+        <div className="outside-container" />
       </body>
     </Html>
   );
