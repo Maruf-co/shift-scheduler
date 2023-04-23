@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { coverRequestsMock } from '../api/requestsMock';
+import { coverRequestsMock } from '@/pages/api/requestsMock';
 import ShiftCardCover from './ShiftCardCover';
 
 const CoverRequestsBody: React.FC = () => {

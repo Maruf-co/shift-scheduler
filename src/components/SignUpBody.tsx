@@ -2,7 +2,7 @@ import React from 'react';
 
 import Image from 'next/image';
 
-import { shiftSignUpMock } from '../api/requestsMock';
+import { shiftSignUpMock } from '@/pages/api/requestsMock';
 import ShiftCardSignUp from './ShiftCardSignUp';
 
 const SignUpBody: React.FC<{ className?: string }> = ({ className }) => {
@@ -23,6 +23,7 @@ const SignUpBody: React.FC<{ className?: string }> = ({ className }) => {
           shiftTitle={card.shiftName}
           shiftSubTitle={card.available}
           imgSrc={organization.logo}
+          cardLink={`card/${card.id}`}
         />
       );
     });

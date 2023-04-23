@@ -1,14 +1,12 @@
-import HeadMeta from '@/components/HeadMeta'
+import HeadMeta from '@/components/HeadMeta';
 
 export default function Login() {
   return (
     <>
       <HeadMeta />
       <main>
-        <div className='m-10'>
-            login
-        </div>
+        <div className="m-10">login</div>
       </main>
     </>
-  )
+  );
 }

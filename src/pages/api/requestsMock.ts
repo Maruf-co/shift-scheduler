@@ -110,7 +110,7 @@ export const employeeMock = {
   email: 'prozypaysya247@mail.com',
   position: 'Staff',
   avatar:
-    'https://www.appsheet.com/image/getimageurl?appName…ad8a735e1c8cc4c91ee6eac62ef1141f7f4f8e3&width=600',
+    'https://lh3.googleusercontent.com/VHYKdRiESsEx-xYQXTZ8j8WOEGqffuUmv_u9V-11Dva_Ju4ZcXNgb86t7NlIb2E=w600',
 };
 // Employer
 export const employerMock = {
@@ -119,7 +119,7 @@ export const employerMock = {
   email: 'default666@mail.com',
   position: 'Field Manager',
   avatar:
-    'https://www.appsheet.com/image/getimageurl?appName…3be1725e8327ddd804230a78414fb0c24f2c84f&width=600',
+    'https://lh3.googleusercontent.com/_ZEqqZVL-S21SPTlxWDguICVDTi1gdtIRKpx8fistamSDnNSdA2Er_FXsPbnvF8=w600',
   organization: 'Location North',
   logo: 'https://lh3.googleusercontent.com/V0YvtlUy_LcYx-yEaTiTo62MsE2IKkWg8hTIuPw2oCiHuBIjFu-t6wlakxxakQ=w600',
 };
@@ -167,13 +167,13 @@ export const shiftCardMock = {
       id: '2dj3odj4oidcjnk45joiojk3',
       name: 'Erzhan',
       avatar:
-        'https://www.appsheet.com/image/getimageurl?appName…ad8a735e1c8cc4c91ee6eac62ef1141f7f4f8e3&width=600',
+        'https://lh3.googleusercontent.com/VHYKdRiESsEx-xYQXTZ8j8WOEGqffuUmv_u9V-11Dva_Ju4ZcXNgb86t7NlIb2E=w600',
     },
     {
       id: 'fuyh2iuhgc98y23dc',
       name: 'User2',
       avatar:
-        'https://www.appsheet.com/image/getimageurl?appName…96a47d78ef15252afd8cb9aed5de69f7deda027&width=600',
+        'https://lh3.googleusercontent.com/wTAniTaEVtPNE30zbwhKk4vUl8pmRCzBWODd_04m9giDevVeSPcTwprLKb-mow8=w600',
     },
   ],
 };
@@ -187,6 +187,6 @@ export const coverShiftCardMock = {
     id: 'jhoudhuio2h398yhd89i2d',
     name: 'User 6',
     avatar:
-      'https://www.appsheet.com/image/getimageurl?appName…027a1d72e50cfc17f6c869f45944377f0324045&width=600',
+      'https://lh3.googleusercontent.com/EgDeVncO4zhlqpfZBFCbcXJc8Cyh4GQ1wpbgi0hKDBILdbvJhn8RSMHLG4GuncI=w600',
   },
 };

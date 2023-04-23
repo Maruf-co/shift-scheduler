@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { myShiftsMock } from '../api/requestsMock';
+import { myShiftsMock } from '@/pages/api/requestsMock';
 import ShiftCardMyShifts from './ShiftCardMyShifts';
 
 export type Shift = {
