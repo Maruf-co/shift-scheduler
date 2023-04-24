@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import NPM from '../../public/NPM';
 
 import {
@@ -8,9 +8,7 @@ import {
   BsFillInfoCircleFill,
   BsShareFill,
 } from 'react-icons/bs';
-import Button from './Button';
 import Link from 'next/link';
-// BsFillCheckCircleFill
 
 export interface ISideBar {
   onClose: React.MouseEventHandler<HTMLButtonElement>;

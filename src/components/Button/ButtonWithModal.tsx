@@ -55,7 +55,7 @@ const ButtonWithModal: React.FC<IButtonWithModal> = ({
   );
 
   const modalComponent = (
-    <Modal actionBar={actionBar}>
+    <Modal actionBar={actionBar} onClose={handleClose}>
       <h2 className={style.title}>Confirm</h2>
       <p className={style.content}>{modal.text}</p>
     </Modal>

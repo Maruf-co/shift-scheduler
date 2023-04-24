@@ -192,3 +192,56 @@ export const coverShiftCardMock = {
       'https://lh3.googleusercontent.com/EgDeVncO4zhlqpfZBFCbcXJc8Cyh4GQ1wpbgi0hKDBILdbvJhn8RSMHLG4GuncI=w600',
   },
 };
+
+// Users
+export const usersListMock = [
+  {
+    id: 'h2i93uhdnj2i3uojd',
+    name: 'User 8',
+    position: 'Staff',
+    avatar:
+      'https://lh3.googleusercontent.com/La9qvCnjTNvuUCt3P8W4PfFNYUmnd0cSV5qXDmO4oN5fFtKUm17zt34z9f23fxo=w600',
+  },
+  {
+    id: 'h2i93uhdnj2i3uoje',
+    name: 'User 9',
+    position: 'Staff',
+    avatar:
+      'https://lh3.googleusercontent.com/DzHqq0dzbwL-YunTWr_gyu7-_CBgjGj8ZDptG3AaC4yeEctxiP-dmC0nUCcZKA=w600',
+  },
+  {
+    id: 'h2i93uhdnj2i3uojf',
+    name: 'User 10',
+    position: 'Staff',
+    avatar:
+      'https://lh3.googleusercontent.com/Np_EI1WoJjDcLLvF25Xeyt0xqVpcmechS2PcOd3T-baLQj-TU_hlQ-V5rw0EZyI=w600',
+  },
+];
+
+// ClockIn
+export const ClockInListMock = [
+  {
+    userId: 'wioejufhweuiofh3',
+    name: 'Erzhan',
+    avatar:
+      'https://lh3.googleusercontent.com/VHYKdRiESsEx-xYQXTZ8j8WOEGqffuUmv_u9V-11Dva_Ju4ZcXNgb86t7NlIb2E=w600',
+    shiftName: 'Sat, Apr 25, 2023 7:00 AM (4 hours)',
+    shiftId: 'ifuhbgwieujfhniwue8',
+  },
+  {
+    userId: 'wioejufhweuiofh4',
+    name: 'User7',
+    shiftName: 'Sat, Apr 25, 2023 7:00 AM (4 hours)',
+    avatar:
+      'https://lh3.googleusercontent.com/EgDeVncO4zhlqpfZBFCbcXJc8Cyh4GQ1wpbgi0hKDBILdbvJhn8RSMHLG4GuncI=w600',
+    shiftId: 'ifuhbgwieujfhniwue9',
+  },
+  {
+    userId: 'h2i93uhdnj2i3uojd',
+    name: 'User 8',
+    avatar:
+      'https://lh3.googleusercontent.com/La9qvCnjTNvuUCt3P8W4PfFNYUmnd0cSV5qXDmO4oN5fFtKUm17zt34z9f23fxo=w600',
+    shiftName: 'Sat, Apr 25, 2023 7:00 AM (4 hours)',
+    shiftId: 'ifuhbgwieujfhniwue0',
+  },
+];
