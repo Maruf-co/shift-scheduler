@@ -3,7 +3,7 @@ import cn from 'classnames';
 
 import { MdMenu } from 'react-icons/md';
 
-import SideBar from '../SideBar';
+import SideBar from '../Sidebar';
 
 import Button from '.';
 

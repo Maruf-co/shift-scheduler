@@ -37,7 +37,7 @@ const Menu: React.FC<IMenu> = ({ withClockIn, onClose, id }) => {
     menuRow: 'hover:bg-gray-100 flex items-center w-full px-4 py-1.5',
     menuText: 'text-gray-600 pl-1.5',
 
-    background: 'fixed z-10 inset-0 opacity-80',
+    background: 'fixed z-10 inset-0 opacity-80 cursor-default',
   };
 
   const menuRow = (icon: React.ReactNode, text: string) => {
