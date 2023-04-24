@@ -66,12 +66,13 @@ const Card: React.FC<ICard> = ({ data }) => {
 
       {buttons && (
         <div className={style.buttonsWrap}>
-          {buttons.map((button) => {
+          {buttons.map((button, idx) => {
             return (
               <ButtonWithModal
                 className={style.button}
                 tooltip={button.tooltip}
                 modal={button.modal}
+                key={idx}
               >
                 {button.icon}
                 {button.text}

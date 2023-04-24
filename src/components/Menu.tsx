@@ -29,7 +29,7 @@ const Menu: React.FC<IMenu> = ({ withClockIn, onClose, id }) => {
     document.body.classList.add('overflow-hidden');
 
     return () => document.body.classList.remove('overflow-hidden');
-  }, []);
+  }, [menuId]);
 
   const style = {
     icon: 'text-gray-500',

@@ -62,7 +62,7 @@ const MyShiftsBody: React.FC = () => {
     <div className={style.shiftsWrap}>
       {upcomingShifts.length > 0 && <span className={style.title}>Upcoming Shifts</span>}
       {renderShiftsList(upcomingShifts)}
-      {todayShifts.length > 0 && <span className={style.title}>Today's Shifts</span>}
+      {todayShifts.length > 0 && <span className={style.title}>Today&apos;s Shifts</span>}
       {renderShiftsList(todayShifts, true)}
     </div>
   );

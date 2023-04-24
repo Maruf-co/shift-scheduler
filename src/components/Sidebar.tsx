@@ -72,13 +72,14 @@ const SideBar: React.FC<ISideBar> = ({ onClose, isOpen }) => {
 
   const renderOptionsList = (
     <>
-      {optionsList.map((option) => {
+      {optionsList.map((option, idx) => {
         return (
           <Link
             className={style.option}
             // @ts-ignore
             onClick={onClose}
             href={option.href}
+            key={idx}
           >
             {option.icon}
             <span className={style.optionText}>{option.text}</span>
