@@ -1,7 +1,5 @@
 import Image from 'next/image';
 
-import Image from 'next/image';
-
 import HeadMeta from '@/components/HeadMeta';
 import Navbar from '@/components/Navbar';
 import Grid from '@/components/Grid';
@@ -9,30 +7,8 @@ import ButtonWithModal from '@/components/Button/ButtonWithModal';
 
 import { ClockInListMock } from './api/requestsMock';
 import { BiExit } from 'react-icons/bi';
-import Grid from '@/components/Grid';
-import ButtonWithModal from '@/components/Button/ButtonWithModal';
-
-import { ClockInListMock } from './api/requestsMock';
-import { BiExit } from 'react-icons/bi';
 
 export default function ClockedIn() {
-  const style = {
-    container:
-      'relative border-2 rounded-lg bg-white hover:shadow-lg flex items-center p-2 h-[90px]',
-    imgWrap: 'w-[60px] h-[70px]',
-    img: 'object-cover h-full w-full',
-    textWrap: 'flex flex-col items-start ml-4',
-    title: 'text-xl text-gray-700',
-    text: 'text-sm text-gray-500',
-    iconWrap: 'absolute right-4',
-    icon: 'text-gray-500',
-  };
-
-  const modal = {
-    text: 'Are you sure you want to clock out from this shift?',
-    optionText: 'clock out',
-  };
-
   const style = {
     container:
       'relative border-2 rounded-lg bg-white hover:shadow-lg flex items-center p-2 h-[90px]',
