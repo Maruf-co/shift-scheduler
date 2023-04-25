@@ -13,7 +13,7 @@ import { MdSettingsSuggest } from 'react-icons/md';
 import Link from 'next/link';
 
 export interface ISideBar {
-  onClose: React.MouseEventHandler<HTMLButtonElement>;
+  onClose: React.MouseEventHandler<HTMLButtonElement | HTMLAnchorElement>;
   isOpen: boolean;
 }
 
@@ -81,13 +81,7 @@ const SideBar: React.FC<ISideBar> = ({ onClose, isOpen }) => {
     <>
       {optionsList.map((option, idx) => {
         return (
-          <Link
-            className={style.option}
-            // @ts-ignore
-            onClick={onClose}
-            href={option.href}
-            key={idx}
-          >
+          <Link className={style.option} onClick={onClose} href={option.href} key={idx}>
             {option.icon}
             <span className={style.optionText}>{option.text}</span>
           </Link>

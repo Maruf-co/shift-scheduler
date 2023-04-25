@@ -23,18 +23,22 @@ const Modal: React.FC<IModal> = ({ children, actionBar, onClose }) => {
     actionBar: 'flex justify-end',
   };
 
-  return ReactDOM.createPortal(
-    <div>
-      <button className={style.background} onClick={onClose} />
-      <div className={style.modal}>
-        <div className={style.content}>
-          {children}
-          <div className={style.actionBar}>{actionBar}</div>
+  const outsideContainer = document.querySelector('.outside-container');
+
+  return (
+    outsideContainer &&
+    ReactDOM.createPortal(
+      <div>
+        <button className={style.background} onClick={onClose} />
+        <div className={style.modal}>
+          <div className={style.content}>
+            {children}
+            <div className={style.actionBar}>{actionBar}</div>
+          </div>
         </div>
-      </div>
-    </div>,
-    // @ts-ignore
-    document.querySelector('.outside-container')
+      </div>,
+      outsideContainer
+    )
   );
 };
 

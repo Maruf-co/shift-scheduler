@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import cn from 'classnames';
+import Image from 'next/image';
 import NPM from '../../public/NPM';
 import Button from './Button';
 
@@ -27,6 +28,10 @@ const Instructions: React.FC = () => {
     </div>
   );
 
+  const getImg = (src: string) => {
+    return <Image src={src} alt="Shift Scheduler Slide" width={440} height={220} />;
+  };
+
   const content = [
     {
       img: logo,
@@ -34,27 +39,27 @@ const Instructions: React.FC = () => {
       text: "This app will help you sign up for shifts, clock in & clock out when you're ready, request cover when you need it, and view your timesheet",
     },
     {
-      img: logo,
+      img: getImg('https://i.ibb.co/yqt95TJ/Sign-Up-for-Shifts.jpg'),
       title: 'Sign Up for Shifts',
       text: 'Click the calendar with the plus sign to sign up for a shift. And don’t worry, I’ll always ask you to confirm before you take any action!',
     },
     {
-      img: logo,
+      img: getImg('https://i.ibb.co/qjnQ8bt/Clock-in.jpg'),
       title: 'Clock-In',
       text: 'To clock in for your shift, simply click on the three dots on the “My Shifts” page to open a menu at the bottom. There you can select “Clock In” to begin your shift.',
     },
     {
-      img: logo,
+      img: getImg('https://i.ibb.co/rsKbK1R/Clock-out.jpg'),
       title: 'Clock-Out',
       text: 'When your shift is over, click on menu in the top right hand corner and select “Clocked In.” Then select the arrow and you’ll be clocked out. It’s that easy!s',
     },
     {
-      img: logo,
+      img: getImg('https://i.ibb.co/r3X0vVj/Requesting-Cover.jpg'),
       title: 'Requesting Cover',
       text: 'To request a cover for your shift, click on the three dots on the “My Shifts” page to open a menu at the bottom. Then select “Request Cover.” All staff requests can be viewed on the “Cover Requests” page',
     },
     {
-      img: logo,
+      img: getImg('https://i.ibb.co/pR3sdjz/Accepting-Cover-Requests.jpg'),
       title: 'Accepting Cover Requests',
       text: 'To accept a cover request, select the "Cover Request" tab at the bottom of the app. There you can select any listed shift and click "Swap Shifts" to complete the action.',
     },

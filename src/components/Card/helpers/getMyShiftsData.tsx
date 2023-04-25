@@ -15,7 +15,6 @@ export const getMyShiftsData = (id: string | string[] | undefined) => {
   const { date, employee } = card || myShiftsMock[0];
 
   const today = new Date().setHours(0, 0, 0, 0);
-  // @ts-ignore
   const curDate = new Date(date).setHours(0, 0, 0, 0);
   const status = today === curDate ? "Today's Shifts" : 'Upcoming Shifts';
 

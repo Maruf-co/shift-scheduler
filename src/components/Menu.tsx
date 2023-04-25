@@ -56,17 +56,21 @@ const Menu: React.FC<IMenu> = ({ withClockIn, onClose, id }) => {
     </Link>
   );
 
-  return ReactDOM.createPortal(
-    <div>
-      <button onClick={onClose} className={style.background} />
-      <ol className={style.menu} style={{ top: menuTop }}>
-        <li>{detailsOption}</li>
-        <li>{withClockIn && menuRow(<FaPlay size={15} className={style.icon} />, 'Clock In')}</li>
-        <li>{menuRow(<BsMegaphoneFill size={15} className={style.icon} />, 'Request Cover')}</li>
-      </ol>
-    </div>,
-    // @ts-ignore
-    document.querySelector('.outside-container')
+  const outsideContainer = document.querySelector('.outside-container');
+
+  return (
+    outsideContainer &&
+    ReactDOM.createPortal(
+      <div>
+        <button onClick={onClose} className={style.background} />
+        <ol className={style.menu} style={{ top: menuTop }}>
+          <li>{detailsOption}</li>
+          <li>{withClockIn && menuRow(<FaPlay size={15} className={style.icon} />, 'Clock In')}</li>
+          <li>{menuRow(<BsMegaphoneFill size={15} className={style.icon} />, 'Request Cover')}</li>
+        </ol>
+      </div>,
+      outsideContainer
+    )
   );
 };
 
