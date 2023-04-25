@@ -6,6 +6,7 @@ import { getSignUpData } from '@/components/Card/helpers/getSignUpData';
 
 export default function SignUpCard() {
   const router = useRouter();
+  const { id, orgIdx, cardIdx } = router.query;
 
   return (
     <>
@@ -15,7 +16,7 @@ export default function SignUpCard() {
       />
       <main className="overflow-x-hidden">
         <Navbar page="sign-up" isback />
-        <Card data={getSignUpData(router.query.id)} />
+        <Card data={getSignUpData(id, orgIdx, cardIdx)} />
       </main>
     </>
   );

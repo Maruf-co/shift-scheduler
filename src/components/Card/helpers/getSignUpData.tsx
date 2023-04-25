@@ -1,4 +1,4 @@
-import { shiftCardMock } from '@/pages/api/requestsMock';
+import { shiftSignUpMock } from '@/pages/api/requestsMock';
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -10,7 +10,11 @@ type BookItem = {
   avatar: string;
 };
 
-export const getSignUpData = (id: string | string[] | undefined) => {
+export const getSignUpData = (
+  id: string | string[] | undefined,
+  orgIdx: string | string[] | undefined,
+  cardIdx: string | string[] | undefined
+) => {
   const style = {
     tableImg: 'mx-auto',
     iconWrap: 'bg-npm-red rounded-full p-3',
@@ -20,8 +24,11 @@ export const getSignUpData = (id: string | string[] | undefined) => {
     userText: 'ml-3',
   };
 
-  const { locationName, logo, scheduledDate, startTime, endTime, capacity, available, booked } =
-    shiftCardMock;
+  const idxOrg: number = orgIdx ? +orgIdx : 0;
+  const idxCard: number = cardIdx ? +cardIdx : 0;
+  const card = shiftSignUpMock[idxOrg].cards[idxCard];
+  const { scheduledDate, startTime, endTime, capacity, available, booked } = card;
+  const { locationName, logo } = shiftSignUpMock[idxOrg];
 
   const data = {
     logo,
@@ -63,7 +70,7 @@ export const getSignUpData = (id: string | string[] | undefined) => {
       },
       {
         title: 'Open Shifts',
-        value: available === '0' ? 'No Available Shifts' : `Available Shifts: ${available}`,
+        value: available === 0 ? 'No Available Shifts' : `Available Shifts: ${available}`,
       },
     ],
     table: {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -17,14 +17,14 @@ const SignUpBody: React.FC<{ className?: string }> = ({ className }) => {
   };
 
   const renderedBody = shiftSignUpMock.map((organization, idx) => {
-    const renderedCards = organization.cards.map((card) => {
+    const renderedCards = organization.cards.map((card, cardIdx) => {
       return (
         <ShiftCardSignUp
           key={card.id}
           shiftTitle={card.shiftName}
           shiftSubTitle={card.available}
           imgSrc={organization.logo}
-          cardLink={`sign-up/card/${card.id}`}
+          cardLink={`sign-up/card/${card.id}?orgIdx=${idx}&cardIdx=${cardIdx}`}
         />
       );
     });

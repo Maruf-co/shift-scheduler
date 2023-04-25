@@ -6,7 +6,7 @@ import { getMyShiftsData } from '@/components/Card/helpers/getMyShiftsData';
 
 export default function MyShiftCard() {
   const router = useRouter();
-  const { id, date } = router.query;
+  const { id } = router.query;
 
   return (
     <>
@@ -16,7 +16,7 @@ export default function MyShiftCard() {
       />
       <main className="overflow-x-hidden">
         <Navbar page="my-shifts" isback />
-        <Card data={getMyShiftsData(id, date)} />
+        <Card data={getMyShiftsData(id)} />
       </main>
     </>
   );

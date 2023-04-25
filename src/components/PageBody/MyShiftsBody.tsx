@@ -52,7 +52,7 @@ const MyShiftsBody: React.FC = () => {
           shiftSubTitle={shift.locationName}
           imgSrc={shift.logo}
           withClockIn={withClockIn}
-          cardLink={`my-shifts/card/${shift.id}?date=${shift.date}`}
+          cardLink={`my-shifts/card/${shift.id}`}
         />
       );
     });

@@ -93,7 +93,7 @@ const Card: React.FC<ICard> = ({ data }) => {
         })}
       </div>
 
-      {table && (
+      {table && table.data.length > 0 && (
         <>
           <hr />
           <div>

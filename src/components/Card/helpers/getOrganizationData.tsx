@@ -19,7 +19,8 @@ export const getOrganizationData = (id: string | string[] | undefined) => {
     buttonText: 'text-xs text-stone-700 font-bold mt-1.5',
   };
 
-  const { name, logo, location, shifts } = organizationMock;
+  const card = organizationMock.find((item) => id === item.id);
+  const { name, logo, location, shifts } = card || organizationMock[0];
 
   const data = {
     logo,

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 import HeadMeta from '@/components/HeadMeta';
 import Navbar from '@/components/Navbar';
@@ -25,7 +26,7 @@ export default function EmployeeList() {
         <Grid className="my-8 mx-32">
           {usersListMock.map((user) => {
             return (
-              <div className={style.container} key={user.id}>
+              <Link className={style.container} key={user.id} href={`/user/${user.id}`}>
                 <Image
                   src={user.avatar}
                   alt="User's avatar"
@@ -37,7 +38,7 @@ export default function EmployeeList() {
                   <h3 className={style.title}>{user.name}</h3>
                   <h6 className={style.text}>{user.position}</h6>
                 </div>
-              </div>
+              </Link>
             );
           })}
         </Grid>

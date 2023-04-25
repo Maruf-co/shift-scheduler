@@ -9,14 +9,14 @@ interface IShiftCardSignUp {
   shiftTitle: string;
   shiftSubTitle: number;
   imgSrc: string;
-  cardLink?: string;
+  cardLink: string;
 }
 
 const ShiftCardSignUp: React.FC<IShiftCardSignUp> = ({
   shiftTitle,
   shiftSubTitle,
   imgSrc,
-  cardLink = 'https://ya.ru',
+  cardLink,
 }) => {
   const modal = {
     text: 'Are you sure you want to sign up for this shift?',
@@ -29,10 +29,13 @@ const ShiftCardSignUp: React.FC<IShiftCardSignUp> = ({
     </ButtonWithModal>
   );
 
+  const availability =
+    shiftSubTitle === 0 ? 'No Available shifts' : `Available shifts: ${shiftSubTitle}`;
+
   return (
     <ShiftCard
       shiftTitle={shiftTitle}
-      shiftSubTitle={`Available shifts: ${shiftSubTitle}`}
+      shiftSubTitle={availability}
       imgSrc={imgSrc}
       cardLink={cardLink}
       actionButton={actionButton}

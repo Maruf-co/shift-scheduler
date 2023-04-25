@@ -1,4 +1,4 @@
-import { coverShiftCardMock } from '@/pages/api/requestsMock';
+import { coverRequestsMock } from '@/pages/api/requestsMock';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -13,7 +13,8 @@ export const getCoverData = (id: string | string[] | undefined) => {
     buttonText: 'text-xs text-stone-700 font-bold mt-1.5',
   };
 
-  const { shiftName, locationName, logo, currentOwner } = coverShiftCardMock;
+  const card = coverRequestsMock.find((item) => id === item.id);
+  const { shiftName, locationName, logo, currentOwner } = card || coverRequestsMock[0];
 
   const data = {
     logo,
