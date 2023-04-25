@@ -84,8 +84,8 @@ export const myShiftsMock = [
   },
   {
     id: 'wekrhfcoqwh3r3',
-    shiftName: 'Thu, Apr 23, 2023 7:00 PM (4 hours)',
-    date: 'Apr 23, 2023',
+    shiftName: 'Thu, Apr 26, 2023 7:00 PM (4 hours)',
+    date: 'Apr 26, 2023',
     locationName: 'Location South',
     logo: 'https://lh3.googleusercontent.com/EA6ZGhkVVjHWhZfaweGgiWsRCY5h3TSDjgVmnyIaD9anqoR6ynZdy-T8z-YtWJ4=w600',
   },
@@ -98,8 +98,8 @@ export const myShiftsMock = [
   },
   {
     id: 'qwdweqqdsqq3',
-    shiftName: 'Thu, Apr 23, 2023 11:00 AM (4 hours)',
-    date: 'Apr 23, 2023',
+    shiftName: 'Thu, Apr 25, 2023 19:00 AM (4 hours)',
+    date: 'Apr 25, 2023',
     locationName: 'Location North',
     logo: 'https://lh3.googleusercontent.com/V0YvtlUy_LcYx-yEaTiTo62MsE2IKkWg8hTIuPw2oCiHuBIjFu-t6wlakxxakQ=w600',
   },
@@ -245,3 +245,14 @@ export const ClockInListMock = [
     shiftId: 'ifuhbgwieujfhniwue0',
   },
 ];
+
+export const postShiftMock = {
+  id: '2ae85211',
+  name: 'Location North',
+  logo: 'https://lh3.googleusercontent.com/V0YvtlUy_LcYx-yEaTiTo62MsE2IKkWg8hTIuPw2oCiHuBIjFu-t6wlakxxakQ=w600',
+  location: '1757 Market St, Denver, CO',
+  startDate: '20.07.2021',
+  startTime: '15:00',
+  endTime: '16:00',
+  capacity: '1',
+};

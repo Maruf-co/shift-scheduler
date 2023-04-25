@@ -20,7 +20,6 @@ const ButtonWithMenu: React.FC<IButtonWithMenu> = ({ className, withClockIn, car
   const handleClose = () => setIsOpen(false);
 
   const style = {
-    wrap: 'relative',
     button: `hover:bg-gray-100 rounded-full`,
     icon: 'text-gray-500',
   };

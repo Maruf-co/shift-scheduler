@@ -7,6 +7,7 @@ export interface IButtonWithModal {
   className?: string;
   children?: React.ReactNode;
   tooltip?: string;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
 
   modal?: {
     text: string;
@@ -22,6 +23,7 @@ const ButtonWithModal: React.FC<IButtonWithModal> = ({
     text: 'Are you sure?',
     optionText: 'yes',
   },
+  onClick,
 }) => {
   const [showModal, setShowModal] = useState(false);
 
@@ -48,7 +50,7 @@ const ButtonWithModal: React.FC<IButtonWithModal> = ({
       <Button className={style.button} onClick={handleClose}>
         NO
       </Button>
-      <Button className={style.button} onClick={() => console.log('Take shift (backend)')}>
+      <Button className={style.button} onClick={onClick}>
         {modal.optionText.toUpperCase()}
       </Button>
     </div>

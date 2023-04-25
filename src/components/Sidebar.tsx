@@ -8,6 +8,8 @@ import {
   BsFillInfoCircleFill,
   BsShareFill,
 } from 'react-icons/bs';
+import { MdSettingsSuggest } from 'react-icons/md';
+
 import Link from 'next/link';
 
 export interface ISideBar {
@@ -57,6 +59,11 @@ const SideBar: React.FC<ISideBar> = ({ onClose, isOpen }) => {
       icon: <BsListUl className={style.optionLogo} size={20} />,
       text: 'Instructions',
       href: '/instructions',
+    },
+    {
+      icon: <MdSettingsSuggest className={style.optionLogo} size={20} />,
+      text: 'Create New Shift',
+      href: '/shift-manager',
     },
     {
       icon: <BsFillInfoCircleFill className={style.optionLogo} size={20} />,

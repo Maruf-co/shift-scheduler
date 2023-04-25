@@ -1,14 +1,14 @@
-import React from 'react'
-import Head from "next/head";
+import React from 'react';
+import Head from 'next/head';
 
 export interface IHeadMeta {
   title?: string;
-  description?: string; 
+  description?: string;
 }
 
 const HeadMeta: React.FC<IHeadMeta> = ({
-    title = 'Shift scheduler',
-    description = 'Shift scheduler app to manage schedules of employers',
+  title = 'Shift scheduler',
+  description = 'Shift scheduler app to manage schedules of employers',
 }) => {
   return (
     <Head>

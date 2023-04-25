@@ -8,6 +8,7 @@ export interface IButton {
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
   tooltip?: string;
   id?: string;
+  type?: 'button' | 'submit' | 'reset';
 }
 
 const Button: React.FC<IButton> = ({ children, className, tooltip, ...props }) => {
